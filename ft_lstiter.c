@@ -6,18 +6,19 @@
 /*   By: mdaoui <mdaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 16:40:24 by mdaoui            #+#    #+#             */
-/*   Updated: 2026/10/20 16:49:54 by mdaoui           ###   ########.fr       */
+/*   Updated: 2026/10/21 14:32:14 by mdaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_lstiter(t_list *lst ,void (*f)(void *))
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    if(!f)
-        return;
-    while(lst)
-    {
-        f(lst -> content);
-        lst = lst-> next;
-    }
+	if (!f)
+		return ;
+	while (lst)
+	{
+		f(lst -> content);
+		lst = lst-> next;
+	}
 }

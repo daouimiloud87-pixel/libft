@@ -6,16 +6,17 @@
 /*   By: mdaoui <mdaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 11:47:46 by mdaoui            #+#    #+#             */
-/*   Updated: 2026/10/20 11:53:16 by mdaoui           ###   ########.fr       */
+/*   Updated: 2026/10/21 14:38:54 by mdaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-t_list *ft_lstlast(t_list *lst)
+
+t_list	*ft_lstlast(t_list *lst)
 {
-    if(!lst)
-        return(NULL);
-    while(lst -> next)
-        lst = lst-> next;
-    return(lst);
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
+		lst = lst-> next;
+	return (lst);
 }
