@@ -6,7 +6,7 @@
 /*   By: mdaoui <mdaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 18:35:35 by mdaoui            #+#    #+#             */
-/*   Updated: 2026/10/21 16:17:30 by mdaoui           ###   ########.fr       */
+/*   Updated: 2026/10/26 12:57:01 by mdaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i > 0)
 	{
 		i--;
-		if (s[i] == (unsigned char)c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 	}
 	return (NULL);

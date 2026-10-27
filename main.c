@@ -267,7 +267,26 @@ int main(void)
 {
     if(c >= 'a' && c <= 'z')
         return(c - 32);
-    return (c);
+    return (c);#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	i = 0;
+	if (!dest || !src)
+		return (NULL);
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
+}
 }
 int main(void)
 {
@@ -307,7 +326,7 @@ int main(void)
     free(lst);
 }*/
 
-int main(void)
+/*int main(void)
 {
     t_list *lst;
     t_list *node1;
@@ -321,4 +340,94 @@ int main(void)
     last = ft_lstlast(lst);
 
     printf("Size: %s\n",last->content);
-}
+}*/
+/*int main(void)
+{
+    printf("%d\n",ft_isascii(129));
+    printf("%d\n",ft_isascii(1));
+    printf("%d\n",ft_isascii(150));
+}*/
+/*int main(void)
+{
+    int  str[6] = {1,2,3,4,5};
+    ft_memset(str+8,1,4);
+    printf("%d %d %d %d\n ",str[0],str[1],str[2],str[3]);
+    return(0);
+}*/
+/*int main(void)
+{
+    int c = 5;
+    ft_memset(&c,-1,2);
+    printf("%d\n",c);
+}*/
+/*int main(void)
+{
+     int x=5;
+    char *h = (char *)&x;
+    ft_memset(&h[0],70000%256,1);
+    ft_memset(&h[1],70000/256%256,1);
+    ft_memset(&h[2],(70000/(256*256))%256,1);
+    printf("%d\n",x);
+}*/
+/*int main(void)
+{
+    char set[] = "hello";
+    ft_memset(set,'o',6);
+    printf("%s\n",set);
+}*/
+/*int main(void)
+{
+    char s[] = "hello";
+    ft_bzero(s,1);
+    write(1,&s,5);
+    return (0);
+}*/
+
+/*int main(void)
+{
+    char s[]= "hello";
+    char d[10];
+    ft_memcpy(d,s,5);
+    printf("%s\n",d);
+
+}*/
+/*int main(void)
+{
+    int s[] = {1,5,6,9,7};
+    unsigned char *p =ft_memchr(s,5,5);
+    if(p!=NULL)
+        printf("%s\n",*p);
+    else 
+    printf("error");
+    return(0);
+}*/
+ /*int main(void)
+ {
+    int s1[] = {1,4,6,7};
+    int s2[] = {1,4,9,7};
+    printf("%d\n",ft_memcmp(s1,s2,sizeof(s2)));
+ }*/
+ /*int main(void)
+ {
+    printf("%zu\n",ft_strlen(NULL));
+ }*/
+ /*int main(void)
+ {
+    
+    printf("%s\n",ft_strrchr("",'\0'));
+
+    printf("%s\n",ft_strrchr("hello",'l'));
+ }*/
+ /*int main(void)
+ {
+   char	s1[] = {(char)200, '\0'};
+	char	s2[] = {(char)100, '\0'};
+
+	printf("strcmp: %d\n", ft_strncmp(s1, s2,8));
+	printf("Without cast: %d\n", s1[0] - s2[0]);
+	printf("With cast: %d\n",
+		(unsigned char)s1[0] - (unsigned char)s2[0]);
+	return (0);
+
+ }*/
+ 

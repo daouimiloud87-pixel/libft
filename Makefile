@@ -6,7 +6,7 @@
 #    By: mdaoui <mdaoui@student.1337.ma>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/20 16:16:54 by mdaoui            #+#    #+#              #
-#    Updated: 2026/10/22 16:55:17 by mdaoui           ###   ########.fr        #
+#    Updated: 2026/10/26 20:37:52 by mdaoui           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,5 +83,3 @@ re: fclean
 	$(MAKE) all
 
 .PHONY: all clean fclean re
- 
-
